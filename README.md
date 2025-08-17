@@ -1,7 +1,7 @@
 # CloudCart – Meu Site de Vendas
 
 **Descrição**
-CloudCart é um projeto de e-commerce 100% funcional que fiz usando CSS puro e JavaScript vanilla. Possui carrinho de compras completo e pagamento via PIX com QR Code. É totalmente responsivo e pronto para portfólio.
+CloudCart é um projeto de e-commerce que fiz usando CSS puro e JavaScript. Possui carrinho de compras completo e pagamento via PIX com QR Code. É totalmente responsivo, fiz ele para melhorar meus conhecimentos nas linguagens citadas.
 
 **Principais Funcionalidades**
 - Carrinho funcional (adicionar, remover produtos e calcular total)
