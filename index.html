@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudCart - Sua Loja de Produtos Digitais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+    <link rel="stylesheet" href="css/pagina-inicial.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/pagamento.css">
+    <link rel="stylesheet" href="css/rodape.css">
+</head>
+<body>
+    <nav class="barra-navegacao">
+        <div class="container">
+            <a class="marca-navbar" href="#">
+                <img src="img/logo/cloudcart.png" alt="CloudCart Logo" class="logo-loja">CloudCart
+            </a>
+            <button class="botao-toggle" type="button" onclick="toggleMenu()">
+                <span class="icone-toggle">☰</span>
+            </button>
+            <div class="menu-navegacao" id="menuNavegacao">
+                <ul class="lista-menu">
+                    <li class="item-menu">
+                        <a class="link-menu ativo" href="#inicio">Início</a>
+                    </li>
+                    <li class="item-menu">
+                        <a class="link-menu" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="item-menu">
+                        <a class="link-menu" href="sobre.html">Sobre</a>
+                    </li>
+                </ul>
+                <button class="botao-carrinho" onclick="abrirCarrinho()">
+                    🛒 Carrinho
+                    <span class="contador-carrinho">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="secao-principal">
+        <div class="container">
+            <h1>Bem-vindo ao CloudCart</h1>
+            <p>Encontre os melhores produtos digitais com os melhores preços</p>
+            <div class="caixa-busca">
+                <input type="text" id="entrada-busca" placeholder="Pesquisar produtos..." aria-label="Pesquisar">
+                <button type="button" id="botao-busca" onclick="buscarProdutos()">
+                    🔍 Buscar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos Digitais</h2>
+            
+            <div class="botoes-categoria">
+                <button class="botao-categoria ativo" data-categoria="todos">
+                    🚀 Todos
+                </button>
+                <button class="botao-categoria" data-categoria="cursos">
+                    📚 Cursos
+                </button>
+                <button class="botao-categoria" data-categoria="softwares">
+                    💻 Softwares
+                </button>
+                <button class="botao-categoria" data-categoria="ebooks">
+                    📖 E-books
+                </button>
+                <button class="botao-categoria" data-categoria="templates">
+                    🎨 Templates
+                </button>
+                <button class="botao-categoria" data-categoria="recursos">
+                    🎯 Recursos
+                </button>
+            </div>
+
+            <div class="grade-produtos" id="container-produtos">
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="conteudo-rodape">
+                <div class="coluna-rodape">
+                    <h5>Sobre o CloudCart</h5>
+                    <p>Sua loja de produtos digitais com os melhores preços e qualidade.</p>
+                </div>
+                <div class="coluna-rodape">
+                    <h5>Contato</h5>
+                    <ul>
+                        <li>📧 contato@cloudcart.com</li>
+                        <li>📞 (11) 99999-9999</li>
+                        <li>📍 São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="linha-divisoria"></div>
+            <div class="copyright">
+                <p>&copy; 2024 CloudCart. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-carrinho" id="modalCarrinho">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h3>🛒 Carrinho de Compras</h3>
+                <button class="botao-fechar" onclick="fecharCarrinho()">✕</button>
+            </div>
+            <div class="corpo-modal">
+                <div id="itens-carrinho">
+                </div>
+            </div>
+            <div class="rodape-modal">
+                <div class="secao-total">
+                    <div class="total-carrinho">
+                        <h4>Total:</h4>
+                        <h4>R$ <span id="total-carrinho">0.00</span></h4>
+                    </div>
+                </div>
+                <div class="botoes-acoes">
+                    <button class="botao-finalizar" onclick="finalizarCompra()">
+                        💳 Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-pagamento" id="modalPagamento">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h3>💳 Pagamento PIX</h3>
+                <button class="botao-fechar" onclick="fecharPagamento()">✕</button>
+            </div>
+            <div class="corpo-modal">
+                <div class="pagamento-conteudo">
+                    <p>Escaneie o QR Code para finalizar o pagamento:</p>
+                    <div class="qr-code-container">
+                        <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=PIX_CLOUDCART_2024" alt="QR Code PIX" class="qr-code">
+                    </div>
+                    <div class="codigo-pix">
+                        <p><strong>Código PIX:</strong></p>
+                        <div class="input-pix">
+                            <input type="text" id="codigoPix" value="PIX_CLOUDCART_2024" readonly>
+                            <button class="botao-copiar" onclick="copiarCodigoPix()">📋 Copiar</button>
+                        </div>
+                    </div>
+                    <div class="instrucoes">
+                        <p>📱 Use o app do seu banco para escanear o QR Code</p>
+                        <p>💻 Ou copie o código PIX e cole no app</p>
+                        <p>⏰ O pagamento será confirmado automaticamente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/produtos.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/produtos-ui.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/pagamento.js"></script>
+    <script src="js/busca.js"></script>
+</body>
+</html> 

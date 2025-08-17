@@ -1,0 +1,103 @@
+.secao-principal {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.secao-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(77, 166, 255, 0.9));
+    z-index: 1;
+}
+
+.secao-principal .container {
+    position: relative;
+    z-index: 2;
+}
+
+.secao-principal h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.secao-principal p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixa-busca {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.caixa-busca input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--texto-escuro);
+    font-size: 1rem;
+    transition: var(--transicao);
+}
+
+.caixa-busca input:focus {
+    outline: none;
+    border-color: var(--texto-escuro);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.caixa-busca input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.caixa-busca button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--cartao-escuro);
+    color: var(--texto-escuro);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+    border: 2px solid var(--texto-escuro);
+}
+
+.caixa-busca button:hover {
+    background-color: var(--texto-escuro);
+    color: var(--fundo-escuro);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .secao-principal h1 {
+        font-size: 2rem;
+    }
+
+    .caixa-busca {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-principal {
+        padding: 2rem 0;
+    }
+} 

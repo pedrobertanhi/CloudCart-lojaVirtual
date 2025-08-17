@@ -1,0 +1,107 @@
+.barra-navegacao {
+    background-color: var(--cartao-escuro);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.barra-navegacao .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.marca-navbar {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--texto-escuro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icone-loja {
+    font-size: 1.8rem;
+}
+
+.logo-loja {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.logo-loja:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+}
+
+.botao-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--texto-escuro);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-navegacao {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.link-menu {
+    color: var(--texto-mudo);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.link-menu:hover,
+.link-menu.ativo {
+    color: var(--cor-primaria);
+    background-color: rgba(108, 92, 231, 0.1);
+}
+
+@media (max-width: 768px) {
+    .botao-toggle {
+        display: block;
+    }
+
+    .menu-navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--cartao-escuro);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        box-shadow: var(--sombra);
+        display: none;
+    }
+
+    .menu-navegacao.ativo {
+        display: flex;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} 

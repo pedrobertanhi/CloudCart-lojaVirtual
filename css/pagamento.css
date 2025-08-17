@@ -1,0 +1,95 @@
+.pagamento-conteudo {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.pagamento-conteudo p {
+    margin-bottom: 1rem;
+    color: var(--texto-escuro);
+    font-size: 0.95rem;
+}
+
+.qr-code-container {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.qr-code {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 200px;
+}
+
+.codigo-pix {
+    margin: 1.5rem 0;
+}
+
+.codigo-pix p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.input-pix {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-pix input {
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--texto-escuro);
+    font-family: monospace;
+    font-size: 0.85rem;
+    min-width: 180px;
+}
+
+.botao-copiar {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transicao);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.botao-copiar:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.instrucoes {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 184, 148, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--cor-sucesso);
+}
+
+.instrucoes p {
+    margin-bottom: 0.3rem;
+    color: var(--texto-escuro);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .input-pix {
+        flex-direction: column;
+    }
+
+    .input-pix input {
+        min-width: auto;
+        width: 100%;
+    }
+} 

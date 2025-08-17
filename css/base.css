@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #0066cc;
+    --cor-secundaria: #4da6ff;
+    --cor-sucesso: #00cc66;
+    --cor-perigo: #ff4444;
+    --fundo-escuro: #0a0a0a;
+    --cartao-escuro: #1a1a1a;
+    --texto-escuro: #ffffff;
+    --texto-mudo: #cccccc;
+    --borda-escura: #333333;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --transicao: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+.notificacao {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+    z-index: 3000;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.notificacao.ativo {
+    transform: translateX(-50%) translateY(0);
+}
+
+.notificacao .icone {
+    font-size: 1.2rem;
+}
+
+.notificacao .texto {
+    font-size: 0.95rem;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50%) translateY(-100px); }
+    to { transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(-50%) translateY(0); }
+    to { transform: translateX(-50%) translateY(-100px); }
+} 
