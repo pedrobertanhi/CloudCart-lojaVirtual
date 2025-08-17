@@ -13,7 +13,7 @@ CloudCart é um projeto de e-commerce que fiz usando CSS puro e JavaScript. Poss
 **Tecnologias**
 - HTML5
 - CSS3 puro (Flexbox, Grid, variáveis, animações)
-- JavaScript vanilla
+- JavaScript
 - Google Fonts (Poppins)
 - API QR Code
 
