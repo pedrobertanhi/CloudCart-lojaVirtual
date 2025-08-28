@@ -17,6 +17,6 @@ CloudCart é um projeto de e-commerce que fiz usando HTML5, CSS e JavaScript. Po
 - Google Fonts (Poppins)
 - API QR Code
 
-🚀 Desenvolvido 100% com HTML5, CSS e Javascript, com carrinho funcional e pagamento PIX.
+Desenvolvido 100% com HTML5, CSS e Javascript, com carrinho funcional e pagamento PIX.
 
 Link para visualizar o site: [Cloud Cart](https://cloudcart-projeto.netlify.app/)
