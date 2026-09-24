@@ -4,7 +4,7 @@ Loja virtual de produtos digitais desenvolvida com **HTML, CSS e JavaScript puro
 
 [Acessar demonstração](https://cloudcart-projeto.netlify.app/)
 
-![Uploading image.png…]()
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/096e598f-ecbb-41af-aea4-37579913f593" />
 
 
 ## Funcionalidades
