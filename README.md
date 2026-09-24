@@ -1,22 +1,62 @@
-# CloudCart – Meu Site de Vendas
+# CloudCart
 
-**Descrição**
-CloudCart é um projeto de e-commerce que fiz usando HTML5, CSS e JavaScript. Possui carrinho de compras completo e pagamento via PIX com QR Code. É totalmente responsivo, fiz ele para melhorar meus conhecimentos nas linguagens citadas.
+Loja virtual de produtos digitais desenvolvida com **HTML, CSS e JavaScript puro**. O projeto apresenta um catálogo interativo com pesquisa, filtros, carrinho de compras e uma demonstração de pagamento via PIX, tudo em uma interface responsiva com tema escuro.
 
-**Principais Funcionalidades**
-- Carrinho funcional (adicionar, remover produtos e calcular total)
-- Pagamento PIX com QR Code e código copiável
-- Busca em tempo real e filtros por categoria
-- Design responsivo e mobile-first
-- Interface limpa e moderna
+[Acessar demonstração](https://cloudcart-projeto.netlify.app/)
 
-**Tecnologias**
+## Funcionalidades
+
+- Catálogo de cursos, softwares, e-books, templates e recursos digitais.
+- Pesquisa de produtos por nome ou descrição.
+- Filtros por categoria.
+- Carrinho com inclusão e remoção de itens, quantidade e cálculo do total.
+- Modal de checkout com QR Code e código PIX copiável para demonstração.
+- Layout responsivo para computadores, tablets e celulares.
+- Página institucional com informações sobre o projeto.
+
+## Tecnologias
+
 - HTML5
-- CSS3 puro (Flexbox, Grid, variáveis, animações)
+- CSS3 com Flexbox, Grid, variáveis e animações
 - JavaScript
-- Google Fonts (Poppins)
-- API QR Code
+- Google Fonts com a família Poppins
+- QR Server API para gerar o QR Code demonstrativo
+- Netlify para hospedagem da demonstração
 
-Desenvolvido 100% com HTML5, CSS e Javascript, com carrinho funcional e pagamento PIX.
+## Executar localmente
 
-Link para visualizar o site: [Cloud Cart](https://cloudcart-projeto.netlify.app/)
+O projeto não exige instalação de dependências ou processo de compilação. Clone o repositório e abra o arquivo `index.html` no navegador:
+
+```bash
+git clone https://github.com/pedrobertanhi/CloudCart-lojaVirtual.git
+cd CloudCart-lojaVirtual
+```
+
+Para evitar limitações do navegador ao abrir arquivos locais, você também pode iniciar um servidor simples:
+
+```bash
+python -m http.server 8000
+```
+
+Depois, acesse **http://localhost:8000/**.
+
+## Estrutura do projeto
+
+| Caminho | Conteúdo |
+| --- | --- |
+| `index.html` | Página inicial, catálogo, carrinho e modal de pagamento |
+| `sobre.html` | Página institucional do CloudCart |
+| `css/` | Estilos divididos por área da interface |
+| `js/produtos.js` | Dados e consultas do catálogo |
+| `js/produtos-ui.js` | Exibição, pesquisa e filtros dos produtos |
+| `js/carrinho.js` | Regras e atualização visual do carrinho |
+| `js/pagamento.js` | Abertura do modal e cópia do código PIX |
+| `img/` | Logotipo e demais recursos visuais locais |
+
+## Observação
+
+Este é um projeto demonstrativo de front-end. O QR Code e o código PIX exibidos são ilustrativos e não processam pagamentos reais. Os produtos, dados institucionais e contatos apresentados fazem parte da demonstração.
+
+## Autor
+
+Desenvolvido por [Pedro Bertanhi](https://github.com/pedrobertanhi).
