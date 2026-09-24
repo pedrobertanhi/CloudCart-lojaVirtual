@@ -4,6 +4,9 @@ Loja virtual de produtos digitais desenvolvida com **HTML, CSS e JavaScript puro
 
 [Acessar demonstração](https://cloudcart-projeto.netlify.app/)
 
+![Uploading image.png…]()
+
+
 ## Funcionalidades
 
 - Catálogo de cursos, softwares, e-books, templates e recursos digitais.
