@@ -2,7 +2,7 @@
 
 Loja virtual de produtos digitais desenvolvida com **HTML, CSS e JavaScript puro**. O projeto apresenta um catálogo interativo com pesquisa, filtros, carrinho de compras e uma demonstração de pagamento via PIX, tudo em uma interface responsiva com tema escuro.
 
-[Acessar demonstração](https://cloudcart-projeto.netlify.app/)
+[Acessar Site](https://cloudcart-projeto.netlify.app/)
 
 <img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/096e598f-ecbb-41af-aea4-37579913f593" />
 
